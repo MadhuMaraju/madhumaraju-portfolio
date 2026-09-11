@@ -1,0 +1,270 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   Madhu Maraju — Mechanical Engineering Portfolio
+   ========================================================================== */
+
+/* Laptop / Medium Desktop (<= 1180px) */
+@media (max-width: 1180px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  
+  .about-grid {
+    grid-template-columns: 310px 1fr;
+    gap: 2.5rem;
+  }
+
+  .capability-matrix-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* Tablet Landscape & Below (<= 992px) */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-cad-stage {
+    max-height: 420px;
+  }
+
+  .pkd-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .pkd-editorial-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .pkd-photo-item.featured-span {
+    grid-column: span 2;
+    grid-row: auto;
+    height: 220px;
+  }
+
+  .pkd-photo-item {
+    height: 160px;
+  }
+
+  .project-case-card,
+  .project-case-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .project-case-card:nth-child(even) .project-media-col {
+    order: 2;
+  }
+
+  .project-case-card:nth-child(even) .project-content-col {
+    order: 1;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .profile-col {
+    max-width: 320px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .profile-card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+}
+
+/* Tablet & Mobile Navigation Collapse (<= 1120px) */
+@media (max-width: 1120px) {
+  :root {
+    --nav-height: 64px;
+  }
+
+  .tech-nav {
+    top: 0.5rem;
+    width: calc(100% - 1.5rem);
+    padding: 0 1rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: calc(var(--nav-height) + 1rem);
+    left: 1rem;
+    right: 1rem;
+    background: rgba(14, 18, 23, 0.98);
+    border: 1px solid var(--border-tech);
+    border-radius: 4px;
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: var(--transition-smooth);
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-actions .btn {
+    display: none;
+  }
+
+  .mobile-nav-actions {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .mobile-nav-actions .btn {
+    display: inline-flex !important;
+    flex: 1;
+    font-size: 0.72rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .section-wrapper {
+    padding: 5rem 0 4rem;
+  }
+
+  .timeline-list::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 42px 1fr;
+    gap: 1rem;
+  }
+
+  .timeline-marker {
+    width: 42px;
+    height: 42px;
+    font-size: 0.65rem;
+  }
+
+  .timeline-card {
+    padding: 1.5rem;
+  }
+
+  .case-study-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Mobile (<= 520px) */
+@media (max-width: 520px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .hero-name-lockup {
+    font-size: clamp(2.4rem, 11vw, 3.4rem);
+    line-height: 0.95;
+    margin-bottom: 1rem;
+  }
+
+  .pkd-feature-card {
+    padding: 1.25rem;
+  }
+
+  .pkd-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .pkd-photo-item.featured-span {
+    grid-column: span 1;
+    height: 180px;
+  }
+
+  .pkd-photo-item {
+    height: 150px;
+  }
+
+  .hero-metrics-strip {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .project-case-card {
+    padding: 1.25rem;
+  }
+
+
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .tech-modal-window {
+    max-height: 95vh;
+  }
+
+  .modal-body-scroll {
+    padding: 1rem;
+  }
+
+  .pdf-viewer-frame {
+    height: 480px;
+  }
+
+  .tech-nav {
+    height: 60px;
+    padding: 0 0.85rem;
+  }
+
+  .brand-title {
+    font-size: 0.92rem;
+  }
+
+  .brand-meta {
+    display: none;
+  }
+}
