@@ -228,7 +228,7 @@ p {
 
 /* Section Header Blueprint Styling */
 .section-wrapper {
-  padding: 6.5rem 0;
+  padding: 3.25rem 0;
   position: relative;
   border-bottom: 1px solid var(--border-subtle);
 }

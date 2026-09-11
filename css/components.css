@@ -228,7 +228,7 @@
 .hero-section {
   min-height: 100vh;
   padding-top: calc(var(--nav-height) + 4rem);
-  padding-bottom: 5rem;
+  padding-bottom: 2.5rem;
   display: flex;
   align-items: center;
   position: relative;
